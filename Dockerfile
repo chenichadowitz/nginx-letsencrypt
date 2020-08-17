@@ -7,4 +7,4 @@ COPY default.conf /etc/nginx/conf.d/default.conf
 COPY ssl-options/ /etc/ssl-options
 RUN chmod +x nginx-letsencrypt && \
     chmod +x certbot.sh 
-ENTRYPOINT ["./nginx-letsencrypt"]
+CMD ./nginx-letsencrypt
